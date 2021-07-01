@@ -1,4 +1,5 @@
 ---
-- hosts: all
+- hosts: localhost
   tasks:
-    - include_tasks: "{{ playbook_dir }}/tasks/tasks/uninstall_default_install.yml"
+    - include_tasks: "{{ playbook_dir }}/tasks/applications/uninstall_default_apps.yml"
+    - include_tasks: "{{ playbook_dir }}/tasks/applications/simple_app_install.yml"
