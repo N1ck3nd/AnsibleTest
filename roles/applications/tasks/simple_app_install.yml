@@ -12,7 +12,7 @@
 
 - name: install apt packages
   package:
-    name: {{ item }}
+    name: "{{ item }}"
   with_items:
       - htop
       - tmux

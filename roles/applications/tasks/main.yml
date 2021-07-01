@@ -1,5 +1,0 @@
----
-- include: 
-    - simple_app_install.yml
-    - uninstall_default_apps.yml
-  when: ansible_os_family == "Debian"
