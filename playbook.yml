@@ -1,4 +1,4 @@
 ---
-- hosts: 127.0.0.1
-  roles:
-    - applications
+- hosts: all
+  tasks:
+    - include_tasks: "{{ playbook_dir }}/tasks/tasks/uninstall_default_install.yml"
