@@ -3,7 +3,15 @@
   become: true
 
   tasks:
-  - name: install packages
+  - name: Update sources.list
+    copy:
+      src: files/sources.list
+      dest: /etc/apt/sources.list
+      force: true
+      owner: root
+      group: root
+
+  - name: install apt packages
     package:
       name: 
         - htop
@@ -21,6 +29,34 @@
         - whois
         - deluge
         - evince
+        - vlc
+        - python3
+        - lm-sensors
+        - audacity
+        - calibre
+        - rdesktop
+        - lshw
+        - network-manager-openvpn-gnome
+        - network-manager-openvpn
+        - openvpn
+        - flameshot
+        - hashcat
+        - aircrack-ng
+        - snapd
+        - remmina
+        - zsh
+        - syncthing
+        - nvidia-cuda-toolkit
+        - nvidia-detect
+        - unzip
+
+  - name: install snap packages
+    community.general.snap:
+      name:
+        - spotify
+        - powershell
+        - pycharm-community
+        - atom
 
   - name: copy wallpaper file
     copy:
@@ -30,11 +66,13 @@
       group: root
 
   - name: set wallpaper
+    become_user: n
     dconf:
       key: "/org/gnome/desktop/background/picture-uri"
       value: "'file://usr/share/backgrounds/ansible-wallpaper.png'"
   
   - name: set wallpaper position
+    become_user: n
     dconf:
       key: "/org/gnome/desktop/background/picture-options"
       value: "'zoom'"

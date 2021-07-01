@@ -1,0 +1,18 @@
+- hosts: localhost
+  connection: local
+  become: true
+  
+  tasks:
+  - name: copy .bashrc file
+    copy:
+      src: files/bashrc
+      dest: /home/n/.bashrc
+      owner: n
+      group: n
+
+  - name: copy .tmux file
+    copy:
+      src: files/tmux
+      dest: /home/n/.tmux
+      owner: n
+      group: n
