@@ -3,3 +3,4 @@
   tasks:
     - include_tasks: "{{ playbook_dir }}/tasks/applications/uninstall_default_apps.yml"
     - include_tasks: "{{ playbook_dir }}/tasks/applications/simple_app_install.yml"
+    - include_tasks: "{{ playbook_dir }}/tasks/gnome/wallpaper.yml"
