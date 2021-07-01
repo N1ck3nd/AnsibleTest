@@ -1,7 +1,6 @@
 - name: remove apt packages
   package:
     state: absent
-    purge: true
     name: {{ item }}
   with_items:
     - gnome-games
