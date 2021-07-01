@@ -2,6 +2,7 @@
   copy:
     src: files/wallpaper.png
     dest: /usr/share/backgrounds/ansible-wallpaper.png
+    force: true
     owner: root
     group: root
 
