@@ -50,13 +50,7 @@
         - nvidia-detect
         - unzip
 
-  - name: install snap packages
-    community.general.snap:
-      name:
-        - spotify
-        - powershell
-        - pycharm-community
-        - atom
+
 
   - name: copy wallpaper file
     copy:

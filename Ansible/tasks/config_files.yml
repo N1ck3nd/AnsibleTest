@@ -16,3 +16,11 @@
       dest: /home/n/.tmux
       owner: n
       group: n
+
+  - name: install snap packages
+  community.general.snap:
+    name:
+      - spotify
+      - powershell
+      - pycharm-community
+      - atom
