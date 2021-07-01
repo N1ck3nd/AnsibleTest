@@ -3,6 +3,21 @@
   become: true
 
   tasks:
-  - name: install htop
+  - name: install packages
     package:
-      name: htop
+      name: 
+        - htop
+        - tmux
+        - docker
+        - docker-compose
+        - vim
+        - keepassxc
+        - terminator
+        - neofetch
+        - gparted
+        - ufw
+        - nmap
+        - wireshark
+        - whois
+        - deluge
+        - evince
