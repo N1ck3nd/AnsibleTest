@@ -1,7 +1,5 @@
-- hosts: all
-  tasks: 
-  - name: remove apt packages
-    apt:
-      name: 
-        - gnome-games
-      state: absent
+- name: remove apt packages
+  apt:
+    name: 
+      - gnome-games
+    state: absent
