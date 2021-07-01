@@ -1,6 +1,7 @@
-- name: remove apt packages
-  apt:
-    state: absent
-    name: "{{ item }}"
-  with_items:
-    - gnome-games
+- hosts: all
+  tasks: 
+  - name: remove apt packages
+    apt:
+      name: 
+        - gnome-games
+      state: absent
