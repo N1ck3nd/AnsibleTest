@@ -1,0 +1,4 @@
+---
+- host: all
+  tasks:
+    - include_tasks: "{{ playbook_dir }}/tasks/applications/uninstall_default_apps.yml"
