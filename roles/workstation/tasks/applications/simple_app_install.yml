@@ -1,0 +1,51 @@
+- name: Update sources.list
+  copy:
+      src: files/sources.list
+      dest: /etc/apt/sources.list
+      force: true
+      owner: root
+      group: root
+
+- name: update apt packages
+  apt:
+    update_cache: yes
+
+- name: install apt packages
+  package:
+    name: {{ item }}
+  with_items:
+      - htop
+      - tmux
+      - docker
+      - docker-compose
+      - vim
+      - keepassxc
+      - terminator
+      - neofetch
+      - gparted
+      - ufw
+      - nmap
+      - wireshark
+      - whois
+      - deluge
+      - evince
+      - vlc
+      - python3
+      - lm-sensors
+      - audacity
+      - calibre
+      - rdesktop
+      - lshw
+      - network-manager-openvpn-gnome
+      - network-manager-openvpn
+      - openvpn
+      - flameshot
+      - hashcat
+      - aircrack-ng
+      - snapd
+      - remmina
+      - zsh
+      - syncthing
+      - nvidia-cuda-toolkit
+      - nvidia-detect
+      - unzip
